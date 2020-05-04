@@ -1,0 +1,17 @@
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\Esoft_Project.exe.config
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\Esoft_Project.exe
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\Esoft_Project.pdb
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\EntityFramework.dll
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\EntityFramework.SqlServer.dll
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\EntityFramework.xml
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\EntityFramework.SqlServer.xml
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\bin\Debug\ru\EntityFramework.resources.dll
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.csprojAssemblyReference.cache
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.Menu.resources
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormClient.resources
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.Properties.Resources.resources
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.csproj.GenerateResource.cache
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.csproj.CopyComplete
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.exe
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.pdb
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormRealEstate.resources

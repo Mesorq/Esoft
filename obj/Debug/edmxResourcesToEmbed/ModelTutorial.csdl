@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WFTutorialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClientsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RealEstateSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adress_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adress_Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adress_House" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adress_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate_latitude" Type="Double" />
+    <Property Name="Coordinate_longitude" Type="Double" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="TotalArea" Type="Double" />
+    <Property Name="TotalFloors" Type="Int32" />
+    <Property Name="Rooms" Type="Int32" />
+    <Property Name="Floor" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="WFTutorialEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClientsSet" EntityType="Self.ClientsSet" />
+    <EntitySet Name="RealEstateSet" EntityType="Self.RealEstateSet" />
+  </EntityContainer>
+</Schema>
