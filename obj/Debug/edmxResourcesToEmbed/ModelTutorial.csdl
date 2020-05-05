@@ -1,25 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="WFTutorialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="agent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DealShare" Type="Int32" />
+    <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_agent" FromRole="agent" ToRole="SupplySet" />
+  </EntityType>
   <EntityType Name="ClientsSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_ClientsSet" FromRole="ClientsSet" ToRole="SupplySet" />
   </EntityType>
   <EntityType Name="RealEstateSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Adress_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Adress_Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Adress_House" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Adress_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address_House" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Coordinate_latitude" Type="Double" />
     <Property Name="Coordinate_longitude" Type="Double" />
     <Property Name="Type" Type="Int32" Nullable="false" />
@@ -27,9 +39,73 @@
     <Property Name="TotalFloors" Type="Int32" />
     <Property Name="Rooms" Type="Int32" />
     <Property Name="Floor" Type="Int32" />
+    <NavigationProperty Name="SupplySet" Relationship="Self.FK_SupplySet_RealEstateSet" FromRole="RealEstateSet" ToRole="SupplySet" />
   </EntityType>
-  <EntityContainer Name="WFTutorialEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityType Name="SupplySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdAgent" Type="Int32" Nullable="false" />
+    <Property Name="IdClient" Type="Int32" Nullable="false" />
+    <Property Name="IdRealEstate" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="agent" Relationship="Self.FK_SupplySet_agent" FromRole="SupplySet" ToRole="agent" />
+    <NavigationProperty Name="ClientsSet" Relationship="Self.FK_SupplySet_ClientsSet" FromRole="SupplySet" ToRole="ClientsSet" />
+    <NavigationProperty Name="RealEstateSet" Relationship="Self.FK_SupplySet_RealEstateSet" FromRole="SupplySet" ToRole="RealEstateSet" />
+  </EntityType>
+  <Association Name="FK_SupplySet_agent">
+    <End Role="agent" Type="Self.agent" Multiplicity="1" />
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplySet">
+        <PropertyRef Name="IdAgent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplySet_ClientsSet">
+    <End Role="ClientsSet" Type="Self.ClientsSet" Multiplicity="1" />
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientsSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplySet">
+        <PropertyRef Name="IdClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplySet_RealEstateSet">
+    <End Role="RealEstateSet" Type="Self.RealEstateSet" Multiplicity="1" />
+    <End Role="SupplySet" Type="Self.SupplySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RealEstateSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SupplySet">
+        <PropertyRef Name="IdRealEstate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WFTutorialEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="agent" EntityType="Self.agent" />
     <EntitySet Name="ClientsSet" EntityType="Self.ClientsSet" />
     <EntitySet Name="RealEstateSet" EntityType="Self.RealEstateSet" />
+    <EntitySet Name="SupplySet" EntityType="Self.SupplySet" />
+    <AssociationSet Name="FK_SupplySet_agent" Association="Self.FK_SupplySet_agent">
+      <End Role="agent" EntitySet="agent" />
+      <End Role="SupplySet" EntitySet="SupplySet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplySet_ClientsSet" Association="Self.FK_SupplySet_ClientsSet">
+      <End Role="ClientsSet" EntitySet="ClientsSet" />
+      <End Role="SupplySet" EntitySet="SupplySet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplySet_RealEstateSet" Association="Self.FK_SupplySet_RealEstateSet">
+      <End Role="RealEstateSet" EntitySet="RealEstateSet" />
+      <End Role="SupplySet" EntitySet="SupplySet" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

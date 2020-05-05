@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.buttonOpenClients = new System.Windows.Forms.Button();
             this.buttonOpenAgents = new System.Windows.Forms.Button();
             this.ButtonOpenRealEstates = new System.Windows.Forms.Button();
-            this.buttonOpenDemands = new System.Windows.Forms.Button();
             this.buttonOpenSupplies = new System.Windows.Forms.Button();
+            this.buttonOpenDemands = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
+            this.Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Logo
-            // 
-            this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(283, 107);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
             // 
             // buttonOpenClients
             // 
@@ -66,6 +56,7 @@
             this.buttonOpenAgents.TabIndex = 2;
             this.buttonOpenAgents.Text = "Риелторы";
             this.buttonOpenAgents.UseVisualStyleBackColor = true;
+            this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
             // ButtonOpenRealEstates
             // 
@@ -77,23 +68,25 @@
             this.ButtonOpenRealEstates.UseVisualStyleBackColor = true;
             this.ButtonOpenRealEstates.Click += new System.EventHandler(this.ButtonOpenRealEstates_Click);
             // 
-            // buttonOpenDemands
-            // 
-            this.buttonOpenDemands.Location = new System.Drawing.Point(12, 326);
-            this.buttonOpenDemands.Name = "buttonOpenDemands";
-            this.buttonOpenDemands.Size = new System.Drawing.Size(265, 48);
-            this.buttonOpenDemands.TabIndex = 4;
-            this.buttonOpenDemands.Text = "Предложения";
-            this.buttonOpenDemands.UseVisualStyleBackColor = true;
-            // 
             // buttonOpenSupplies
             // 
-            this.buttonOpenSupplies.Location = new System.Drawing.Point(12, 399);
+            this.buttonOpenSupplies.Location = new System.Drawing.Point(12, 326);
             this.buttonOpenSupplies.Name = "buttonOpenSupplies";
             this.buttonOpenSupplies.Size = new System.Drawing.Size(265, 48);
-            this.buttonOpenSupplies.TabIndex = 5;
-            this.buttonOpenSupplies.Text = "Потребности";
+            this.buttonOpenSupplies.TabIndex = 4;
+            this.buttonOpenSupplies.Text = "Предложения";
             this.buttonOpenSupplies.UseVisualStyleBackColor = true;
+            this.buttonOpenSupplies.Click += new System.EventHandler(this.buttonOpenDemands_Click);
+            // 
+            // buttonOpenDemands
+            // 
+            this.buttonOpenDemands.Location = new System.Drawing.Point(12, 399);
+            this.buttonOpenDemands.Name = "buttonOpenDemands";
+            this.buttonOpenDemands.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenDemands.TabIndex = 5;
+            this.buttonOpenDemands.Text = "Потребности";
+            this.buttonOpenDemands.UseVisualStyleBackColor = true;
+            this.buttonOpenDemands.Click += new System.EventHandler(this.buttonOpenSupplies_Click);
             // 
             // buttonOpenDeals
             // 
@@ -104,14 +97,24 @@
             this.buttonOpenDeals.Text = "Сделки";
             this.buttonOpenDeals.UseVisualStyleBackColor = true;
             // 
+            // Logo
+            // 
+            this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(283, 107);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 561);
             this.Controls.Add(this.buttonOpenDeals);
-            this.Controls.Add(this.buttonOpenSupplies);
             this.Controls.Add(this.buttonOpenDemands);
+            this.Controls.Add(this.buttonOpenSupplies);
             this.Controls.Add(this.ButtonOpenRealEstates);
             this.Controls.Add(this.buttonOpenAgents);
             this.Controls.Add(this.buttonOpenClients);
@@ -131,8 +134,8 @@
         private System.Windows.Forms.Button buttonOpenClients;
         private System.Windows.Forms.Button buttonOpenAgents;
         private System.Windows.Forms.Button ButtonOpenRealEstates;
-        private System.Windows.Forms.Button buttonOpenDemands;
         private System.Windows.Forms.Button buttonOpenSupplies;
+        private System.Windows.Forms.Button buttonOpenDemands;
         private System.Windows.Forms.Button buttonOpenDeals;
     }
 }

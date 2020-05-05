@@ -125,9 +125,9 @@
             this.labelCoordinate_latitude.AutoSize = true;
             this.labelCoordinate_latitude.Location = new System.Drawing.Point(228, 80);
             this.labelCoordinate_latitude.Name = "labelCoordinate_latitude";
-            this.labelCoordinate_latitude.Size = new System.Drawing.Size(49, 13);
+            this.labelCoordinate_latitude.Size = new System.Drawing.Size(45, 13);
             this.labelCoordinate_latitude.TabIndex = 4;
-            this.labelCoordinate_latitude.Text = "Ширина ";
+            this.labelCoordinate_latitude.Text = "Широта";
             // 
             // labelCoordinate_longitude
             // 
@@ -328,7 +328,7 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(3, 300);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(-4, 300);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
             this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(773, 204);
@@ -381,14 +381,14 @@
             // 
             // textBoxAddress_Street
             // 
-            this.textBoxAddress_Street.Location = new System.Drawing.Point(0, 145);
+            this.textBoxAddress_Street.Location = new System.Drawing.Point(3, 197);
             this.textBoxAddress_Street.Name = "textBoxAddress_Street";
             this.textBoxAddress_Street.Size = new System.Drawing.Size(191, 20);
             this.textBoxAddress_Street.TabIndex = 27;
             // 
             // textBoxAddress_House
             // 
-            this.textBoxAddress_House.Location = new System.Drawing.Point(0, 197);
+            this.textBoxAddress_House.Location = new System.Drawing.Point(0, 145);
             this.textBoxAddress_House.Name = "textBoxAddress_House";
             this.textBoxAddress_House.Size = new System.Drawing.Size(191, 20);
             this.textBoxAddress_House.TabIndex = 28;

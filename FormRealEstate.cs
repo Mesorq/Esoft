@@ -24,10 +24,10 @@ namespace Esoft_Project
             if (listViewRealEstateSet_House.SelectedItems.Count == 1)
             {
                 RealEstateSet realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as RealEstateSet;
-                textBoxAddress_City.Text = realEstate.Adress_City;
-                textBoxAddress_Street.Text = realEstate.Adress_Street;
-                textBoxAddress_House.Text = realEstate.Adress_House;
-                textBoxAddress_Number.Text = realEstate.Adress_Number;
+                textBoxAddress_City.Text = realEstate.Address_City;
+                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_House.Text = realEstate.Address_House;
+                textBoxAddress_Number.Text = realEstate.Address_Number;
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
@@ -118,10 +118,10 @@ namespace Esoft_Project
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             RealEstateSet realEstate = new RealEstateSet();
-            realEstate.Adress_City = textBoxAddress_City.Text;
-            realEstate.Adress_House = textBoxAddress_House.Text;
-            realEstate.Adress_Street = textBoxAddress_Street.Text;
-            realEstate.Adress_Number = textBoxAddress_Number.Text;
+            realEstate.Address_City = textBoxAddress_City.Text; 
+            realEstate.Address_House = textBoxAddress_House.Text;
+            realEstate.Address_Street = textBoxAddress_Street.Text;
+            realEstate.Address_Number = textBoxAddress_Number.Text;
             realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
             realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -155,7 +155,7 @@ namespace Esoft_Project
                 {
                     ListViewItem item = new ListViewItem(new string[]
                     {
-                        realEstate.Adress_City, realEstate.Adress_House, realEstate.Adress_Street, realEstate.Adress_Number, realEstate.Coordinate_latitude.ToString(), realEstate.Coordinate_longitude.ToString(), realEstate.TotalArea.ToString(), realEstate.Rooms.ToString(), realEstate.Floor.ToString()
+                        realEstate.Address_City, realEstate.Address_House, realEstate.Address_Street, realEstate.Address_Number, realEstate.Coordinate_latitude.ToString(), realEstate.Coordinate_longitude.ToString(), realEstate.TotalArea.ToString(), realEstate.Rooms.ToString(), realEstate.Floor.ToString()
                     });
                     item.Tag = realEstate;
                     listViewRealEstateSet_Apartment.Items.Add(item);
@@ -164,7 +164,7 @@ namespace Esoft_Project
                 {
                     ListViewItem item = new ListViewItem(new string[]
                     {
-                        realEstate.Adress_City, realEstate.Adress_House, realEstate.Adress_Street, realEstate.Adress_Number, realEstate.Coordinate_latitude.ToString(), realEstate.Coordinate_longitude.ToString(), realEstate.TotalArea.ToString(), realEstate.TotalFloors.ToString()
+                        realEstate.Address_City, realEstate.Address_House, realEstate.Address_Street, realEstate.Address_Number, realEstate.Coordinate_latitude.ToString(), realEstate.Coordinate_longitude.ToString(), realEstate.TotalArea.ToString(), realEstate.TotalFloors.ToString()
                     });
                     item.Tag = realEstate;
                     listViewRealEstateSet_House.Items.Add(item);
@@ -173,7 +173,7 @@ namespace Esoft_Project
                 {
                     ListViewItem item = new ListViewItem(new string[]
                     {
-                        realEstate.Adress_City, realEstate.Adress_House, realEstate.Adress_Street, realEstate.Adress_Number, realEstate.Coordinate_latitude.ToString(), realEstate.Coordinate_longitude.ToString(), realEstate.TotalArea.ToString()
+                        realEstate.Address_City, realEstate.Address_House, realEstate.Address_Street, realEstate.Address_Number, realEstate.Coordinate_latitude.ToString(), realEstate.Coordinate_longitude.ToString(), realEstate.TotalArea.ToString()
                     });
                     item.Tag = realEstate;
                     listViewRealEstateSet_Land.Items.Add(item);
@@ -191,10 +191,10 @@ namespace Esoft_Project
                 if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
                 {
                     RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
-                    realEstate.Adress_City = textBoxAddress_City.Text;
-                    realEstate.Adress_House = textBoxAddress_House.Text;
-                    realEstate.Adress_Street = textBoxAddress_Street.Text;
-                    realEstate.Adress_Number = textBoxAddress_Number.Text;
+                    realEstate.Address_City = textBoxAddress_City.Text;
+                    realEstate.Address_House = textBoxAddress_House.Text;
+                    realEstate.Address_Street = textBoxAddress_Street.Text;
+                    realEstate.Address_Number = textBoxAddress_Number.Text;
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -209,10 +209,10 @@ namespace Esoft_Project
                 if (listViewRealEstateSet_House.SelectedItems.Count == 1)
                 {
                     RealEstateSet realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as RealEstateSet;
-                    realEstate.Adress_City = textBoxAddress_City.Text;
-                    realEstate.Adress_House = textBoxAddress_House.Text;
-                    realEstate.Adress_Street = textBoxAddress_Street.Text;
-                    realEstate.Adress_Number = textBoxAddress_Number.Text;
+                    realEstate.Address_City = textBoxAddress_City.Text;
+                    realEstate.Address_House = textBoxAddress_House.Text;
+                    realEstate.Address_Street = textBoxAddress_Street.Text;
+                    realEstate.Address_Number = textBoxAddress_Number.Text;
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -226,10 +226,10 @@ namespace Esoft_Project
                 if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
                 {
                     RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
-                    realEstate.Adress_City = textBoxAddress_City.Text;
-                    realEstate.Adress_House = textBoxAddress_House.Text;
-                    realEstate.Adress_Street = textBoxAddress_Street.Text;
-                    realEstate.Adress_Number = textBoxAddress_Number.Text;
+                    realEstate.Address_City = textBoxAddress_City.Text;
+                    realEstate.Address_House = textBoxAddress_House.Text;
+                    realEstate.Address_Street = textBoxAddress_Street.Text;
+                    realEstate.Address_Number = textBoxAddress_Number.Text;
                     realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                     realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
@@ -244,10 +244,10 @@ namespace Esoft_Project
             if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
             {
                 RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
-                textBoxAddress_City.Text = realEstate.Adress_City;
-                textBoxAddress_Street.Text = realEstate.Adress_Street;
-                textBoxAddress_House.Text = realEstate.Adress_House;
-                textBoxAddress_Number.Text = realEstate.Adress_Number;
+                textBoxAddress_City.Text = realEstate.Address_City;
+                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_House.Text = realEstate.Address_House;
+                textBoxAddress_Number.Text = realEstate.Address_Number;
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
@@ -273,10 +273,10 @@ namespace Esoft_Project
             if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
             {
                 RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
-                textBoxAddress_City.Text = realEstate.Adress_City;
-                textBoxAddress_Street.Text = realEstate.Adress_Street;
-                textBoxAddress_House.Text = realEstate.Adress_House;
-                textBoxAddress_Number.Text = realEstate.Adress_Number;
+                textBoxAddress_City.Text = realEstate.Address_City;
+                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_House.Text = realEstate.Address_House;
+                textBoxAddress_Number.Text = realEstate.Address_Number;
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();

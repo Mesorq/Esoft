@@ -12,26 +12,19 @@ namespace Esoft_Project
     using System;
     using System.Collections.Generic;
     
-    public partial class RealEstateSet
+    public partial class agent
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RealEstateSet()
+        public agent()
         {
             this.SupplySet = new HashSet<SupplySet>();
         }
     
         public int Id { get; set; }
-        public string Address_City { get; set; }
-        public string Address_Street { get; set; }
-        public string Address_House { get; set; }
-        public string Address_Number { get; set; }
-        public Nullable<double> Coordinate_latitude { get; set; }
-        public Nullable<double> Coordinate_longitude { get; set; }
-        public int Type { get; set; }
-        public Nullable<double> TotalArea { get; set; }
-        public Nullable<int> TotalFloors { get; set; }
-        public Nullable<int> Rooms { get; set; }
-        public Nullable<int> Floor { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public Nullable<int> DealShare { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SupplySet> SupplySet { get; set; }
