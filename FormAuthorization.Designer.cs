@@ -84,7 +84,7 @@
             // 
             this.buttonOK.Location = new System.Drawing.Point(12, 118);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(103, 23);
+            this.buttonOK.Size = new System.Drawing.Size(103, 24);
             this.buttonOK.TabIndex = 5;
             this.buttonOK.Text = "Войти";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             this.buttonCancel.Location = new System.Drawing.Point(184, 118);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(103, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(103, 24);
             this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -112,7 +112,8 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
             this.Name = "FormAuthorization";
-            this.Text = "FormAuthorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.FormAuthorization_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

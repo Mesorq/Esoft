@@ -458,9 +458,9 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(670, 514);
+            this.buttonDel.Location = new System.Drawing.Point(660, 514);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(106, 23);
+            this.buttonDel.Size = new System.Drawing.Size(106, 48);
             this.buttonDel.TabIndex = 38;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -468,9 +468,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(525, 514);
+            this.buttonEdit.Location = new System.Drawing.Point(502, 514);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(106, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(106, 48);
             this.buttonEdit.TabIndex = 39;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -478,9 +478,9 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(384, 514);
+            this.buttonAdd.Location = new System.Drawing.Point(349, 514);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(106, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(106, 48);
             this.buttonAdd.TabIndex = 40;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -500,7 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 546);
+            this.ClientSize = new System.Drawing.Size(779, 570);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonEdit);

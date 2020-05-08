@@ -57,7 +57,6 @@
             this.listViewApartment = new System.Windows.Forms.ListView();
             this.listViewHome = new System.Windows.Forms.ListView();
             this.listViewEarth = new System.Windows.Forms.ListView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,6 +87,7 @@
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinArea)).BeginInit();
@@ -389,16 +389,6 @@
             this.listViewEarth.View = System.Windows.Forms.View.Details;
             this.listViewEarth.SelectedIndexChanged += new System.EventHandler(this.listViewEarth_SelectedIndexChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(1131, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "ID";
@@ -535,7 +525,7 @@
             // 
             this.buttonDel.Location = new System.Drawing.Point(1190, 578);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(126, 23);
+            this.buttonDel.Size = new System.Drawing.Size(126, 48);
             this.buttonDel.TabIndex = 30;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -545,7 +535,7 @@
             // 
             this.buttonEdit.Location = new System.Drawing.Point(1017, 578);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(126, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(126, 48);
             this.buttonEdit.TabIndex = 31;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -555,17 +545,27 @@
             // 
             this.buttonAdd.Location = new System.Drawing.Point(845, 578);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(126, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(126, 48);
             this.buttonAdd.TabIndex = 32;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(1131, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormDemand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 624);
+            this.ClientSize = new System.Drawing.Size(1351, 634);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDel);
@@ -600,7 +600,8 @@
             this.Controls.Add(this.labelAgent);
             this.Controls.Add(this.labelClient);
             this.Name = "FormDemand";
-            this.Text = "FormDemand";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Потребности";
             this.Load += new System.EventHandler(this.FormDemand_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPrice)).EndInit();

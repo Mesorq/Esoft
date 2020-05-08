@@ -19,3 +19,4 @@ D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormAgen
 D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormSupply.resources
 D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormDemand.resources
 D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormDeal.resources
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormAuthorization.resources
