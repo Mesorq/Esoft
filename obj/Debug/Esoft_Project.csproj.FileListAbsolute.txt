@@ -17,3 +17,5 @@ D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.pdb
 D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormRealEstate.resources
 D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormAgent.resources
 D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormSupply.resources
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormDemand.resources
+D:\ВИЗУАЛЫЫ\Esoft_Project\Esoft_Project\obj\Debug\Esoft_Project.FormDeal.resources

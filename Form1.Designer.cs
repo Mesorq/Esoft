@@ -35,12 +35,13 @@
             this.buttonOpenDemands = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.labelHello = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOpenClients
             // 
-            this.buttonOpenClients.Location = new System.Drawing.Point(12, 113);
+            this.buttonOpenClients.Location = new System.Drawing.Point(13, 145);
             this.buttonOpenClients.Name = "buttonOpenClients";
             this.buttonOpenClients.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenClients.TabIndex = 1;
@@ -50,7 +51,7 @@
             // 
             // buttonOpenAgents
             // 
-            this.buttonOpenAgents.Location = new System.Drawing.Point(12, 180);
+            this.buttonOpenAgents.Location = new System.Drawing.Point(13, 212);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
             this.buttonOpenAgents.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenAgents.TabIndex = 2;
@@ -60,7 +61,7 @@
             // 
             // ButtonOpenRealEstates
             // 
-            this.ButtonOpenRealEstates.Location = new System.Drawing.Point(12, 250);
+            this.ButtonOpenRealEstates.Location = new System.Drawing.Point(13, 282);
             this.ButtonOpenRealEstates.Name = "ButtonOpenRealEstates";
             this.ButtonOpenRealEstates.Size = new System.Drawing.Size(265, 48);
             this.ButtonOpenRealEstates.TabIndex = 3;
@@ -70,7 +71,7 @@
             // 
             // buttonOpenSupplies
             // 
-            this.buttonOpenSupplies.Location = new System.Drawing.Point(12, 326);
+            this.buttonOpenSupplies.Location = new System.Drawing.Point(13, 358);
             this.buttonOpenSupplies.Name = "buttonOpenSupplies";
             this.buttonOpenSupplies.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenSupplies.TabIndex = 4;
@@ -80,7 +81,7 @@
             // 
             // buttonOpenDemands
             // 
-            this.buttonOpenDemands.Location = new System.Drawing.Point(12, 399);
+            this.buttonOpenDemands.Location = new System.Drawing.Point(13, 431);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
             this.buttonOpenDemands.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenDemands.TabIndex = 5;
@@ -90,28 +91,39 @@
             // 
             // buttonOpenDeals
             // 
-            this.buttonOpenDeals.Location = new System.Drawing.Point(12, 476);
+            this.buttonOpenDeals.Location = new System.Drawing.Point(13, 508);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
             this.buttonOpenDeals.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenDeals.TabIndex = 6;
             this.buttonOpenDeals.Text = "Сделки";
             this.buttonOpenDeals.UseVisualStyleBackColor = true;
+            this.buttonOpenDeals.Click += new System.EventHandler(this.buttonOpenDeals_Click);
             // 
             // Logo
             // 
             this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Location = new System.Drawing.Point(4, 32);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(283, 107);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
             // 
+            // labelHello
+            // 
+            this.labelHello.AutoSize = true;
+            this.labelHello.Location = new System.Drawing.Point(1, 1);
+            this.labelHello.Name = "labelHello";
+            this.labelHello.Size = new System.Drawing.Size(44, 13);
+            this.labelHello.TabIndex = 7;
+            this.labelHello.Text = "Привет";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 561);
+            this.Controls.Add(this.labelHello);
             this.Controls.Add(this.buttonOpenDeals);
             this.Controls.Add(this.buttonOpenDemands);
             this.Controls.Add(this.buttonOpenSupplies);
@@ -123,8 +135,10 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Esoft";
+            this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,6 +151,7 @@
         private System.Windows.Forms.Button buttonOpenSupplies;
         private System.Windows.Forms.Button buttonOpenDemands;
         private System.Windows.Forms.Button buttonOpenDeals;
+        private System.Windows.Forms.Label labelHello;
     }
 }
 
